@@ -1,13 +1,171 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.book-list > a,
+.book-list > a:visited {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.book-item {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+  position: relative;
+  padding: 1rem 0;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.book-item:hover {
+  transform: translateY(-10px);
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.book-discount {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.book-item img {
+  max-width: 150px;
+  margin-bottom: 0.5rem;
+}
+
+.book-item h2 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.book-price {
+  margin-bottom: 0.5rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.discounted-price {
+  color: red;
+  margin-left: 0.5rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #0077b6;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005b95;
+}
+
+/* inner book */
+
+.book-inner-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.book-inner-image {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.book-inner-details {
+  flex: 1;
+}
+
+.book-inner-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.book-inner-author {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.book-inner-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.book-inner-original-price {
+  text-decoration: line-through;
+  font-size: 18px;
+}
+
+.book-inner-discounted-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.book-inner-buy-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-inner-description {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: justify;
 }

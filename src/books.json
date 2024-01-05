@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "ΧΑΡΙ ΠΟΤΕΡ 1 – Η ΦΙΛΟΣΟΦΙΚΗ ΛΙΘΟΣ",
+        "author": "ΤΖ. Κ. ΡΟΟΥΛΙΝΓΚ",
+        "price": 15.00,
+        "imageUrl": "assets/harryPotter.jpeg"
+    },
+    {
+        "id": 2,
+        "title": "After Dark",
+        "author": "Murakami Haruk",
+        "price": 15.00,
+        "imageUrl": "assets/afterDark.jpg"
+    }
+]

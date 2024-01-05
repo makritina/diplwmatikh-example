@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import BookDetails from "./components/BookDetails";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
+        <header>
+          <h1>Βιβλιοθηκείο Online</h1>
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/book/:id" element={<BookDetails />} />
+        </Routes>
+        <footer>
+          <p>&copy; 2023 Βιβλιοθηκείο Online</p>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
