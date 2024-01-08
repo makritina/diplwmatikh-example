@@ -10,7 +10,11 @@ function BookDetail() {
 
   return (
     <div className="book-inner-container">
-      <img className="book-inner-image" src={book.imageUrl} alt={book.title} />
+      <img
+        className="book-inner-image"
+        src={`/${book.imageUrl}`}
+        alt={book.title}
+      />
       <div className="book-inner-details">
         <h2 className="book-inner-title">Title: {book.title}</h2>
         <h3 className="book-inner-author">Author: {book.author}</h3>
