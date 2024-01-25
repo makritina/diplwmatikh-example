@@ -109,6 +109,22 @@ button:hover {
 }
 
 /* inner book */
+.bookDetails-wrapper {
+  padding-left: 100px;
+}
+.back-to-home-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.home-icon {
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+}
 
 .book-inner-container {
   display: flex;

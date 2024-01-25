@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import data from "../books.json";
 
 function BookDetail() {
@@ -9,15 +9,22 @@ function BookDetail() {
   if (!book) return <div>Book not found</div>;
 
   return (
-    <div className="book-inner-container">
-      <img
-        className="book-inner-image"
-        src={`/${book.imageUrl}`}
-        alt={book.title}
-      />
-      <div className="book-inner-details">
-        <h2 className="book-inner-title">Title: {book.title}</h2>
-        <h3 className="book-inner-author">Author: {book.author}</h3>
+    <div className="bookDetails-wrapper">
+      {/* Add the img tag inside the Link here */}
+      <Link to="/" className="back-to-home-button">
+        <img src="/assets/home.svg" alt="Home" className="home-icon" /> Home
+      </Link>
+
+      <div className="book-inner-container">
+        <img
+          className="book-inner-image"
+          src={`/${book.imageUrl}`}
+          alt={book.title}
+        />
+        <div className="book-inner-details">
+          <h2 className="book-inner-title">Title: {book.title}</h2>
+          <h3 className="book-inner-author">Author: {book.author}</h3>
+        </div>
       </div>
     </div>
   );
