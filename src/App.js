@@ -10,14 +10,14 @@ function App() {
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
         <header>
-          <h1>Βιβλιοθηκείο Online</h1>
+          <h1>Αποθετήριο Βιβλίων</h1>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/book/:id" element={<BookDetails />} />
         </Routes>
         <footer>
-          <p>&copy; 2023 Βιβλιοθηκείο Online</p>
+          <p>&copy; 2023 Αποθετήριο Βιβλίων</p>
         </footer>
       </div>
     </Router>
